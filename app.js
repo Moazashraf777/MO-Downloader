@@ -14,7 +14,7 @@ const progressSpeed = document.getElementById("progress-speed");
 const progressEta = document.getElementById("progress-eta");
 
 // عنوان الـ Backend. دلوقتي على جهازك إنت، وبعدين هنغيره لما نستضيفه.
-const API_BASE = "http://127.0.0.1:5000";
+const API_BASE = "https://mo-downloader.onrender.com";
 const POLL_INTERVAL_MS = 800;
 const MAX_POLL_FAILURES = 5;
 
