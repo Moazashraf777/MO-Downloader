@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#061b58">
+  <title>MO Downloader</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+
+  <header class="navbar glass">
+    <a class="brand" href="#" aria-label="MO Downloader home">
+      <span class="brand-mark">▶</span>
+      <span><b>MO</b> <em>Downloader</em></span>
+    </a>
+    <nav>
+      <a class="active" href="#home">⌂ <span>Home</span></a>
+      <a href="#how">ⓘ <span>How It Works</span></a>
+    </nav>
+    <span class="free-pill">♡ <span>Free to use</span></span>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="hero-icon video-icon" aria-hidden="true">▶</div>
+      <div class="hero-copy">
+        <p class="eyebrow">SIMPLE · CLEAN · EASY</p>
+        <h1>YouTube <span>Downloader</span></h1>
+        <p class="subtitle">A clean and simple place to prepare your media downloads.</p>
+      </div>
+      <div class="hero-icon clapper" aria-hidden="true">▰<strong>▶</strong></div>
+    </section>
+
+    <section class="download-card glass" aria-labelledby="form-title">
+      <label id="form-title" class="field-label" for="video-url"><span class="link-symbol">↗</span> Paste your link here</label>
+      <div class="url-wrap">
+        <span class="url-icon">↗</span>
+        <input id="video-url" type="url" placeholder="Paste a link to content you own or have permission to download" autocomplete="url">
+        <button id="clear-btn" class="clear-btn" type="button" aria-label="Clear link">×</button>
+      </div>
+
+      <div class="format-row">
+        <span class="format-heading">⚙ Choose format:</span>
+        <div class="format-options" role="group" aria-label="Choose format">
+          <button class="format-option selected" data-format="mp4" type="button" aria-pressed="true">
+            <span class="format-icon">▶</span><span><b>MP4</b><small>Video</small></span><span class="check">✓</span>
+          </button>
+          <button class="format-option" data-format="mp3" type="button" aria-pressed="false">
+            <span class="format-icon">♫</span><span><b>MP3</b><small>Audio</small></span><span class="check">✓</span>
+          </button>
+        </div>
+      </div>
+
+      <button id="prepare-btn" class="download-btn" type="button"><span>↓</span> Prepare download</button>
+
+      <div id="progress" class="progress" hidden>
+        <div class="progress-top">
+          <span id="progress-label">Preparing...</span>
+          <span id="progress-percent">0%</span>
+        </div>
+        <div class="progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="progress-bar">
+          <div id="progress-fill" class="progress-fill"></div>
+        </div>
+        <div class="progress-meta">
+          <span id="progress-speed"></span>
+          <span id="progress-eta"></span>
+        </div>
+      </div>
+
+      <p class="notice">Only use this for content you own or are authorized to download. Respect the platform’s terms and copyright.</p>
+      <p id="status" class="status" role="status" aria-live="polite"></p>
+    </section>
+
+    <section class="how glass" id="how">
+      <h2>How it works</h2>
+      <p>Paste an authorized link, choose a format, then connect this interface to a secure download service before publishing.</p>
+    </section>
+  </main>
+
+  <footer>MO Downloader <span>•</span> Made with care</footer>
+  <script src="app.js"></script>
+</body>
+</html>
