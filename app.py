@@ -159,8 +159,8 @@ def run_job(job_id, url, fmt):
     except ValueError as exc:
         fail_job(job_id, tmpdir, str(exc))
     except yt_dlp.utils.DownloadError:
-    app.logger.exception("yt-dlp download failed in job %s", job_id)
-    fail_job(job_id, tmpdir,
+         app.logger.exception("yt-dlp download failed in job %s", job_id)
+         fail_job(job_id, tmpdir,
              "Could not download this video. It may be private, unavailable, or restricted.")
     except Exception:
         app.logger.exception("Unexpected error in job %s", job_id)
