@@ -14,6 +14,9 @@ import uuid
 from urllib.parse import quote, urlparse
 
 import yt_dlp
+@app.route("/version")
+def version():
+    return jsonify(yt_dlp_version=yt_dlp.version.__version__)
 from flask import Flask, Response, jsonify, request
 from flask_cors import CORS
 
